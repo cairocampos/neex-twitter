@@ -1,0 +1,26 @@
+.w-100 {
+    width: 100%;
+}
+
+.no-resize {
+    resize: none !important;
+}
+
+.fade-left-enter,
+.fade-left-leave-to {
+  opacity: 0;
+  transform: translate3d(-30px, 0, 0);
+}
+
+.fade-left-enter-active,
+.fade-left-leave-active,
+.fade-topdown-enter-active,
+.fade-topdown-leave-active {
+  transition: all 0.3s;
+}
+
+.text {
+  &-white {
+    color: white !important;
+  }
+}
