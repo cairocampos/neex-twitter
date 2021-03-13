@@ -80,7 +80,7 @@
                                 type="password" class="password-field-cadastrar w-input" maxlength="256" name="password"
                                 data-name="Name 3" placeholder="SENHA" id="name-3">
                                 
-                            <input type="text" class="text-field-cadastrar w-input" 
+                            <input type="password" class="text-field-cadastrar w-input" 
                                 maxlength="256" name="password_confirmation" data-name="Name 3"
                                 placeholder="CONFIRMAR SENHA" id="name-3">
                                 

@@ -11,12 +11,12 @@
 .div-azul {
   display: inline-block;
   width: 50%;
-  height: 1000px;
+  height: 100vh;
   float: left;
   background-color: #039ff5;
-  background-image: url('../images/iconfinder-icon.svg');
-  background-position: 0% 50%;
-  background-size: 1200px;
+  background-image: url('/iconfinder-icon.svg');
+  background-position: center center;
+  background-size: contain;
   background-repeat: no-repeat;
 }
 

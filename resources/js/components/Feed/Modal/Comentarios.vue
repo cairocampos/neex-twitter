@@ -1,6 +1,7 @@
 <template>
     <div class="content">
-        <div v-if="comments.length" class="ui comments content" ref="scrollable">
+        <p v-if="loading">Carregando comentários...</p>
+        <div v-else-if="comments.length" class="ui comments content" ref="scrollable">
             <div class="comment" v-for="comment in comments" :key="comment.id">
                 <a class="avatar">
                     <i class="user icon"></i>
@@ -35,7 +36,7 @@ export default {
     },
     data() {
         return {
-            loading:true,
+            loading:false,
             comments: [],
             teste:false
         }
