@@ -91,16 +91,6 @@
                         <div class="w-form-done">
                             <div>Thank you! Your submission has been received!</div>
                         </div>
-                        @if($errors->any())
-                        <div class="w-form-fail" style="display: block;">
-                            @error('email')
-                                <div>{{$message}}</div>
-                            @enderror
-                            @error('password')
-                                <div>{{$message}}</div>
-                            @enderror
-                        </div>
-                    @endif
                     </div>
                 </div>
             </div>
@@ -115,7 +105,25 @@
         </style>
     </div>
     <script src="js/webflow.js" type="text/javascript"></script>
+    <script src="js/app.js" type="text/javascript"></script>
     <!-- [if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif] -->
+
+    <script>
+        @if($errors->any())
+            let html = "<ul>";
+            @foreach($errors->all() as $error)
+                html += "<li>"+'{{$error}}'+"</li>";
+            @endforeach
+            html += "</ul>";
+            Swal.fire({
+                title:"Validation error!",
+                html:html,
+                icon:"error"
+            });
+        @endif
+            
+
+    </script>
 </body>
 
 </html>

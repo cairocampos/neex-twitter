@@ -1,4 +1,13 @@
 window._ = require('lodash');
+const Swal = require('sweetalert2');
+window.Swal = Swal.mixin({
+    customClass: {
+        confirmButton: 'btn btn-primary',
+        cancelButton: 'btn btn-secondary'
+    },
+    buttonsStyling: false
+});
+
 
 /**
  * We'll load jQuery and the Bootstrap jQuery plugin which provides support
